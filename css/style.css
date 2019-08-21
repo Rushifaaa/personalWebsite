@@ -1,0 +1,86 @@
+/*Tag selectors*/
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+/*Class Selectors*/
+
+
+/*Navigation*/
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    height: 64px;
+}
+.nav-item {
+    padding: 20px;
+}
+.nav-placeholder {
+    height: 64px;
+}
+
+/*Header*/
+.header-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background-color: aquamarine;
+    align-items: center;
+   
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 95%;
+    background-color: darkturquoise;
+    align-items: center;
+    text-align: center;
+}
+
+/*Main Content*/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    background-color: lightblue;
+    align-items: center;
+}
+.main {
+    width: 95%;
+    height: 90%;
+    background-color:  lightgray;
+}
+
+
+/*Footer*/
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background: lightcoral;
+    align-items: center;
+}
+.footer {
+    width: 95%;
+    height: 90%;
+    background-color:  lightpink;
+}
+  
+@media all and (min-width: 600px) {
+
+}
+  
+@media all and (min-width: 800px) {
+
+}
