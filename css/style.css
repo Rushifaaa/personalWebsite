@@ -1,3 +1,12 @@
+::selection {
+    background-color: rgb(185, 67, 67);
+    color: white;
+}
+
+
+/*ID Selectors*/
+
+
 /*Tag selectors*/
 
 body {
@@ -10,18 +19,21 @@ body {
 
 a {
     color: white;
-   text-decoration: none;
-   background-color: 0;
-   text-shadow: 0;
-   transition: background-color 0.2s, text-shadow 0.3s;
+    text-decoration: none;
+    background-color: 0;
+    text-shadow: 0;
+    transition: background-color 0.2s, text-shadow 0.3s;
 }
+
 a:hover {
     background-color: rgba(177, 74, 74, 0.288);
     text-shadow: 0.5px 0.5px 2px white;
 }
+
 h1 {
     margin: 0;
 }
+
 hr {
     width: 20%;
     border: 10px 0 0 0;
@@ -36,6 +48,7 @@ hr {
 
 
 /*Navigation*/
+
 .nav {
     width: 100%;
     display: flex;
@@ -46,6 +59,7 @@ hr {
     height: 64px;
     font-family: 'Roboto', sans-serif;
 }
+
 .nav-item {
     padding: 20px;
     background-color: 0;
@@ -53,22 +67,30 @@ hr {
     transition: background-color 0.2s, text-shadow 0.3s;
     color: darkred;
 }
+
 .nav-item:hover {
     color: darkred;
     text-shadow: 1px 1px 1px grey;
     background-color: rgba(182, 182, 182, 0.288);
 }
+
 .nav-placeholder {
     height: 64px;
 }
 
+#menu {
+    width: 20px;
+}
+
+
 /*Header*/
+
 .header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
+
 .header {
     margin: 20px auto 20px auto;
     display: flex;
@@ -77,6 +99,7 @@ hr {
     text-align: center;
     font-family: 'Varela Round', sans-serif;
 }
+
 .title-text {
     font-family: 'Pacifico', cursive;
     font-size: 3.5em;
@@ -87,13 +110,16 @@ hr {
     margin: 0;
 }
 
+
 /*Main Content*/
+
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Varela Round', sans-serif;
 }
+
 .main {
     width: 80%;
 }
@@ -103,21 +129,55 @@ hr {
     flex-direction: column;
     align-items: center;
 }
-.skills-title {
 
+.skill-row-title {}
+
+.skill-row {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 0 20px 0;
+    line-height: 1.5;
+    margin: 20px 0 20px 0;
+    align-items: center;
 }
 
+.skill-content-text {
+    font-size: 100%;
+}
+
+
+/*Skill Images*/
+
+.skill-image {
+    font-size: 0;
+    width: 100%
+}
+
+.android-image {
+    width: 100%;
+    min-width: 157.5px;
+}
+
+.www-image {
+    width: 100%;
+    min-width: 157.5px;
+}
+
+
 /*Footer*/
+
 #footer-hr {
     border: 0 0 2px 0;
     width: 100%;
 }
+
 .footer-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Roboto', sans-serif;
 }
+
 .footer {
     width: 100%;
     display: flex;
@@ -126,6 +186,7 @@ hr {
     outline: 0;
     background-color: rgb(219, 125, 125);
 }
+
 .social-list {
     align-items: center;
     display: flex;
@@ -133,23 +194,83 @@ hr {
     list-style-type: none;
     padding-inline-start: 0;
 }
-#list{
+
+#list {
     outline-style: none;
     outline: none;
 }
+
 .social-item {
     margin: 0px;
     padding: 0 10px 0 10px;
 }
+
 .copy {
     margin: 0 0 20px 0;
-    
 }
-  
+
+
+/*Other*/
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media all and (min-width: 0px) {
+    .skill-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .android-image {
+        width: 100%;
+        min-width: 157.5px;
+        max-width: 157.5px;
+    }
+    .www-image {
+        width: 100%;
+        min-width: 157.5px;
+        max-width: 157.5px;
+    }
+}
+
 @media all and (min-width: 600px) {
-
-}
-  
-@media all and (min-width: 800px) {
-
+    .skill-row {
+        flex-direction: row-reverse;
+    }
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: rgb(235, 235, 210);
+        position: fixed;
+        top: 0;
+        height: 64px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .nav-item {
+        width: auto;
+        padding: 20px;
+        background-color: 0;
+        text-shadow: 0;
+        transition: background-color 0.2s, text-shadow 0.3s;
+        color: darkred;
+    }
+    .nav-item:hover {
+        color: darkred;
+        text-shadow: 1px 1px 1px grey;
+        background-color: rgba(182, 182, 182, 0.288);
+    }
+    .nav-placeholder {
+        height: 64px;
+    }
 }
