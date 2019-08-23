@@ -22,7 +22,8 @@ a {
     text-decoration: none;
     background-color: 0;
     text-shadow: 0;
-    transition: background-color 0.2s, text-shadow 0.3s;
+    padding: 0;
+    transition: background-color 0.2s, text-shadow 0.3s, padding-top 0.2s;
 }
 
 a:hover {
@@ -61,17 +62,23 @@ hr {
 }
 
 .nav-item {
+    padding-top: 0;
     padding: 20px;
     background-color: 0;
     text-shadow: 0;
-    transition: background-color 0.2s, text-shadow 0.3s;
+    transition: background-color 0.2s, text-shadow 0.3s, padding-top 0.2s;
     color: darkred;
+}
+
+.nav:active {
+    
 }
 
 .nav-item:hover {
     color: darkred;
     text-shadow: 1px 1px 1px grey;
     background-color: rgba(182, 182, 182, 0.288);
+    padding-top: 25px;
 }
 
 .nav-placeholder {
@@ -108,6 +115,15 @@ hr {
 .title-text2 {
     font-size: 1.2em;
     margin: 0;
+}
+
+#aaa {
+    transition: margin 0.4s;
+    margin: 0;
+}
+
+#aaa:hover {
+    margin: 0 0 0 10px;
 }
 
 
@@ -188,6 +204,7 @@ hr {
 }
 
 .social-list {
+    height: 60px;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -201,8 +218,14 @@ hr {
 }
 
 .social-item {
+    height: 30px;
     margin: 0px;
     padding: 0 10px 0 10px;
+    transition: margin 0.4s;
+}
+
+.social-item:hover {
+    margin: 10px 0 0 0;
 }
 
 .copy {
