@@ -4,7 +4,6 @@
 }
 
 
-/*ID Selectors*/
 
 
 /*Tag selectors*/
@@ -30,6 +29,9 @@ a:hover {
     background-color: rgba(177, 74, 74, 0.288);
     text-shadow: 0.5px 0.5px 2px white;
 }
+a:active {
+    background-color: rgba(139, 0, 0, 0.486);
+}
 
 h1 {
     margin: 0;
@@ -44,37 +46,104 @@ hr {
     padding: 0;
 }
 
+img {
+    transition: margin 1s;
+}
+
+
+/*ID Selectors*/
+
+#aaa {
+    transition: margin 0.4s;
+    margin: 0;
+}
+
+#aaa:hover {
+    margin: 0 0 0 10px;
+}
+
+#burger {
+    display: none;
+    margin-right: 30px;
+    background-color: 0;
+    text-shadow: 0;
+    margin-top: 0;
+    transition: background-color 0.2s, text-shadow 0.3s, margn-top 0.2s;
+}
+#burger div {
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 5px;
+}
+
+#burger:hover {
+    background-color: rgba(177, 74, 74, 0.288);
+    text-shadow: 0.5px 0.5px 2px white;
+    margin-top: 5px;
+}
+#burger:active {
+    background: rgba(139, 0, 0, 0.514);
+}
+
 
 /*Class Selectors*/
 
-
 /*Navigation*/
+.nav-li a {}
 
+.nav ul li a{
+    visibility: visible;
+    color: darkred;
+    font-family: 'Roboto';
+    width: 20px;
+    height: auto;
+}
 .nav ul li {
+    visibility: visible;
+    text-align: center;
     list-style: none;
     float: left;
-    padding: 10px;
+    height: 20px;
+    width: 100%;
 }
+.nav ul li:hover {
+
+}
+
 .nav ul {
-    height: auto;
+    visibility: visible;
+    height: 25px;
     display: flex;
     flex-direction: row-reverse;
     padding-inline-start: 0;
     margin-right: 80px;
-
+    width: 20%;
 }
 .nav {
+    visibility: visible;
+    height: 70px;
     display: flex;
     position: fixed;
     flex-direction: row-reverse;
     top: 0;
     background-color: rgb(235, 235, 210);
     width: 100%;
+    align-items: flex-end;
+
 }
 
 .nav-placeholder {
     height: 70px;
 }
+.hr-burger {
+    display: none;
+    width: 100%;
+}
+#menu-title{
+    display: none;
+}
+
 /*Header*/
 
 .header-container {
@@ -102,15 +171,6 @@ hr {
     margin: 0;
 }
 
-#aaa {
-    transition: margin 0.4s;
-    margin: 0;
-}
-
-#aaa:hover {
-    margin: 0 0 0 10px;
-}
-
 
 /*Main Content*/
 
@@ -131,35 +191,34 @@ hr {
     align-items: center;
 }
 
-.skill-row-title {}
-
 .skill-row {
     display: flex;
     flex-direction: row-reverse;
     padding: 20px 0 20px 0;
     line-height: 1.5;
-    margin: 20px 0 20px 0;
+    margin: 0;
     align-items: center;
+    transition: background-color 2s, margin 3s;
 }
 
 .skill-content-text {
     font-size: 100%;
 }
 
+.skill-row:hover img{
+    margin: 0 0 0 10px;
+}
+.skill-row.image-left:hover img{
+    margin: 0 10px 0 0;
+}
+.skill-row:hover {
+    background-color: rgba(177, 74, 74, 0.288);
+}
+
 
 /*Skill Images*/
 
-.skill-image {
-    font-size: 0;
-    width: 100%
-}
-
-.android-image {
-    width: 100%;
-    min-width: 157.5px;
-}
-
-.www-image {
+.image {
     width: 100%;
     min-width: 157.5px;
 }
@@ -229,7 +288,16 @@ hr {
     user-select: none;
 }
 
-@media all and (min-width: 0px) {
+.image-left {
+    flex-direction: row;
+}
+
+
+@media all and (max-width: 726px) {
+
+    html {
+        font-size: 10px;
+    }
     .skill-row {
         flex-direction: column;
         align-items: center;
@@ -239,18 +307,87 @@ hr {
         flex-direction: column;
         align-items: center
     }
-    .android-image {
+    .image {
         width: 100%;
-        min-width: 157.5px;
-        max-width: 157.5px;
-    }
-    .www-image {
-        width: 100%;
-        min-width: 157.5px;
-        max-width: 157.5px;
+        min-width: 110.5px;
+        max-width: 110.5px;
     }
 }
 
-@media all and (min-width: 600px) {
-    
+@media all and (max-width: 1300px) {
+    .nav-content {
+        display: none;
+    }
+    .nav-placeholder {
+        height: auto;
+    }
+    .nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        float: right;
+        height: auto;
+        background-color: 0;
+        width: 100%;
+        height: 5%;
+        top: 0;
+    }
+    #menu-title {
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        left: 0;
+        margin-left: 20px;
+        height: 20px;
+        font-size: 20px;
+    }
+    .hr-burger1 {
+        display: none;
+        width: 100%;
+        position: fixed;
+        padding-top: 90px;
+    }
+
+    .hr-burger2 {
+        display: none;
+        width: 100%;
+        position: fixed;
+    }
+
+    .nav ul{
+        
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        margin: 48px 0 0 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(235, 235, 210);
+    }
+    .nav ul li {
+        display: table;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+    }
+    .nav ul li:hover {
+        background-color: rgba(177, 74, 74, 0.288);
+    }
+    .nav ul li a{
+        vertical-align: middle;
+        display: table-cell;
+        width: auto;
+        height: auto;
+    }
+        
+        
+    #burger {
+        position: relative;
+        display: inline-block;
+        float: right;
+        visibility: visible;
+        margin: 10px;
+    }
+    #burger:hover {
+        margin: 10px;
+    }
 }

@@ -1,38 +1,51 @@
+//jshint esversion: 6
+
+
 $(document).ready(function() {
+    const htmlTag = $('html');
+    const imageTag = $('img');
+    
+    const navContent = $('.nav-content');
+    const navul = $('.nav ul');
 
-    let nav = $('a.nav-item1')
-    $('#menu').click(function(e) {
-        e.preventDefault();
-        console.log("TEST");
-        if (nav.css("visibility") === "hidden") {
-            console.log("true");
+    const menuBruger = $('#burger');
 
-            $('.nav-item1').css("z-index", "1000");
-            $('.nav-item1').css("visibility", "visible");
-            $('.nav-item1').css("flex-direction", "column");
-        } else {
-            console.log("false");
-            $('.nav-item1').css("visibility", "hidden");
-            $('.nav-item1').css("flex-direction", "reverse-row");
-        }
+    htmlTag.fadeOut(1).fadeIn("slow");
+    imageTag.attr("draggable", "false");
 
-    });
-
-    function hiddenNav(width) {
-        if (width.matches) {
-            $('.nav-item1').css("visibility", "hidden");
-            $('.nav.unselectable').css("height", "64px");
-            $('#menu').css("visibility", "visible");
-            $('.nav.unselectable').css("padding-left", "0");
-
-        } else {
-            $('.nav-item1').css("visibility", "visible");
-            $('#menu').css("visibility", "hidden");
-            $('.nav.unselectable').css("padding-left", "40px");
-        }
+    if(navContent.css("display") === "block") {
+        navContent.css("display", "none");
+    }
+    //avul.css("visibility", "visible");
+    if(navContent.css("display") === "block") {
+        navContent.css("display", "none");
     }
 
-    let s = window.matchMedia("(max-width: 600px)");
-    hiddenNav(s);
-    s.addListener(hiddenNav);
+    menuBruger.click( (e) => {        
+        navContent.toggle(300);
+    });
+
+    const hideNav = (window) => {
+        
+        if(window.matches) {
+            console.log("Hier");
+            navContent.css("display", "none");
+            navul.css("display", "flex");
+        }
+        
+    };
+
+    const hiddenNav = (window) => {
+        if(window.matches) {
+            navul.css("display", "none");
+        }
+    };
+
+    const min1301 = window.matchMedia("(min-width: 1301px)");
+    const max1300 = window.matchMedia("(max-width: 1301px)");
+    hideNav(min1301);
+    hiddenNav(max1300);
+    
+    min1301.addListener(hideNav);
+    max1300.addListener(hiddenNav);
 });
