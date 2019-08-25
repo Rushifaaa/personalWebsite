@@ -90,14 +90,17 @@ img {
 /*Class Selectors*/
 
 /*Navigation*/
-.nav-li a {}
 
 .nav ul li a{
+    position: relative;
     visibility: visible;
     color: darkred;
     font-family: 'Roboto';
     width: 20px;
     height: auto;
+}
+.nav ul li a:hover {
+    margin: 5px 0 0 0;
 }
 .nav ul li {
     visibility: visible;
@@ -198,7 +201,7 @@ img {
     line-height: 1.5;
     margin: 0;
     align-items: center;
-    transition: background-color 2s, margin 3s;
+    transition: background-color 1s, margin 1s;
 }
 
 .skill-content-text {
@@ -315,79 +318,5 @@ img {
 }
 
 @media all and (max-width: 1300px) {
-    .nav-content {
-        display: none;
-    }
-    .nav-placeholder {
-        height: auto;
-    }
-    .nav {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        float: right;
-        height: auto;
-        background-color: 0;
-        width: 100%;
-        height: 5%;
-        top: 0;
-    }
-    #menu-title {
-        font-family: 'Roboto', sans-serif;
-        position: absolute;
-        left: 0;
-        margin-left: 20px;
-        height: 20px;
-        font-size: 20px;
-    }
-    .hr-burger1 {
-        display: none;
-        width: 100%;
-        position: fixed;
-        padding-top: 90px;
-    }
-
-    .hr-burger2 {
-        display: none;
-        width: 100%;
-        position: fixed;
-    }
-
-    .nav ul{
-        
-        flex-direction: column;
-        display: none;
-        position: fixed;
-        margin: 48px 0 0 0;
-        width: 100%;
-        height: auto;
-        background-color: rgb(235, 235, 210);
-    }
-    .nav ul li {
-        display: table;
-        text-align: center;
-        height: 50px;
-        width: 100%;
-    }
-    .nav ul li:hover {
-        background-color: rgba(177, 74, 74, 0.288);
-    }
-    .nav ul li a{
-        vertical-align: middle;
-        display: table-cell;
-        width: auto;
-        height: auto;
-    }
-        
-        
-    #burger {
-        position: relative;
-        display: inline-block;
-        float: right;
-        visibility: visible;
-        margin: 10px;
-    }
-    #burger:hover {
-        margin: 10px;
-    }
+ 
 }
