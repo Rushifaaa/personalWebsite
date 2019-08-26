@@ -3,9 +3,6 @@
     color: white;
 }
 
-
-
-
 /*Tag selectors*/
 
 body {
@@ -50,6 +47,13 @@ img {
     transition: margin 1s;
 }
 
+p {
+    margin: 0;
+}
+ul {
+    margin: 0;
+}
+
 
 /*ID Selectors*/
 
@@ -62,14 +66,13 @@ img {
     margin: 0 0 0 10px;
 }
 
+    /*Mobile Nav*/
 #burger {
     display: none;
-    margin-right: 30px;
-    background-color: 0;
-    text-shadow: 0;
-    margin-top: 0;
-    transition: background-color 0.2s, text-shadow 0.3s, margn-top 0.2s;
+    height: 30px;
+    margin: 15px;
 }
+
 #burger div {
     width: 25px;
     height: 3px;
@@ -80,72 +83,77 @@ img {
 #burger:hover {
     background-color: rgba(177, 74, 74, 0.288);
     text-shadow: 0.5px 0.5px 2px white;
-    margin-top: 5px;
 }
+
 #burger:active {
     background: rgba(139, 0, 0, 0.514);
+}
+
+#footer-hr {
+    border: 0 0 2px 0;
+    width: 100%;
+}
+
+#list {
+    outline-style: none;
+    outline: none;
 }
 
 
 /*Class Selectors*/
 
-/*Navigation*/
-
-.nav ul li a{
-    position: relative;
-    visibility: visible;
-    color: darkred;
-    font-family: 'Roboto';
-    width: 20px;
-    height: auto;
-}
-.nav ul li a:hover {
-    margin: 5px 0 0 0;
-}
-.nav ul li {
-    visibility: visible;
-    text-align: center;
-    list-style: none;
-    float: left;
-    height: 20px;
-    width: 100%;
-}
-.nav ul li:hover {
-
+    /*Navigation*/
+.nav-mobile {
+    display: none;
 }
 
-.nav ul {
-    visibility: visible;
-    height: 25px;
-    display: flex;
-    flex-direction: row-reverse;
-    padding-inline-start: 0;
-    margin-right: 80px;
-    width: 20%;
-}
 .nav {
-    visibility: visible;
-    height: 70px;
     display: flex;
-    position: fixed;
     flex-direction: row-reverse;
+    position: fixed;
     top: 0;
-    background-color: rgb(235, 235, 210);
+    height: 60px;
     width: 100%;
-    align-items: flex-end;
-
+    background-color: beige;
+    padding: 0;
 }
-
 .nav-placeholder {
     height: 70px;
 }
-.hr-burger {
-    display: none;
-    width: 100%;
+.nav ul li a {
+    font-size: 15px;
+    color: darkred;
 }
-#menu-title{
-    display: none;
+.nav ul li a:hover {
+    background-color: transparent;
+    text-shadow: 0.5px 0.5px 1px black;
 }
+.nav ul li a:active {
+    background-color: transparent;
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+    margin-right: 20px;
+}
+.li-nav {
+    padding: 5px;
+    list-style: none;
+    margin-inline-start: 0;
+}
+.li-nav:hover {
+    margin: 5px 0 0 0;
+    background-color: rgba(177, 74, 74, 0.288);
+    text-shadow: 0.5px 0.5px 1px black;
+}
+.li-nav:active{
+    background-color: rgba(139, 0, 0, 0.507);
+} 
+
 
 /*Header*/
 
@@ -209,14 +217,14 @@ img {
 }
 
 .skill-row:hover img{
-    margin: 0 0 0 10px;
+    margin: 0 10px 0 0;
 }
 .skill-row.image-left:hover img{
     margin: 0 10px 0 0;
 }
 .skill-row:hover {
     background-color: rgba(177, 74, 74, 0.288);
-}
+} 
 
 
 /*Skill Images*/
@@ -229,10 +237,7 @@ img {
 
 /*Footer*/
 
-#footer-hr {
-    border: 0 0 2px 0;
-    width: 100%;
-}
+
 
 .footer-container {
     display: flex;
@@ -259,10 +264,6 @@ img {
     padding-inline-start: 0;
 }
 
-#list {
-    outline-style: none;
-    outline: none;
-}
 
 .social-item {
     height: 30px;
@@ -315,8 +316,50 @@ img {
         min-width: 110.5px;
         max-width: 110.5px;
     }
-}
 
-@media all and (max-width: 1300px) {
- 
+    /*Mobile Nav*/
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: auto;
+    }
+    div#burger {
+        margin: 10px;
+    }
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: beige;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .nav-content hr {
+        width: 100%;
+    }
+    .li-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0 20px 0;
+       
+    }
+    .li-nav a {
+        
+        display: table-cell;
+        
+        
+    }
+    .li-nav:hover {
+        margin: 0;
+    }
+    .nav-mobile p{
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        margin: 10px;
+        font-family: 'Varela Round', sans-serif;
+    }
+
 }

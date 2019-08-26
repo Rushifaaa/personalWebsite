@@ -3,15 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scaleable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Jakub</title>
 
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300i|Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
-    <script src="script/onload.js"></script>
 </head>
 
 <body>
@@ -21,24 +19,26 @@
 
 
                 
+        <div class="nav-mobile">
+            <p><strong>Menu</strong></p>
+        </div>
         
+
+        <div id="burger">
+            <div class="burger-line1"></div>
+            <div class="burger-line2"></div>
+            <div class="burger-line3"></div>
+        </div>
+
         <ul class="nav-content">
 
-            <div id="menu-title" class="nav-content">
-                <p><strong>Menu</strong></p>
-            </div>
-            
-
-            <div id="burger">
-                <div class="burger-line1"></div>
-                <div class="burger-line2"></div>
-                <div class="burger-line3"></div>
-            </div>
+            <hr class="nav-mobile">
 
             <li class="li-nav" ><a href="#">Home</a></li>
             <li class="li-nav" ><a href="#">Contact</a></li>
             <li class="li-nav" ><a href="#">HOLDER</a></li>
             <li class="li-nav" ><a href="#">HOLDER</a></li>
+            <hr class="nav-mobile">
         </ul>
 
         
@@ -52,7 +52,7 @@
         <div class="header">
             <div class="title">
                 <h1 class="title-text">Im Jakub</h1>
-                <p class="title-text2">a apprentice at <strong><a id="aaa" href="https://www.AAA.at/">AAA</a></strong></p>
+                <p class="title-text2">a apprentice at <strong><a id="aaa" href="https://www.allaboutapps.at/">All About Apps</a></strong></p>
             </div>
         </div>
         <hr>
@@ -64,7 +64,7 @@
         <div class="main">
             <div class="skills">
 
-                <h2 class="skills-title unselectable">My Skills that I learnd at AAA</h2>
+                <h2 class="skills-title unselectable">My Skills that I learnd at All About Apps</h2>
 
                 <div class="skill-row">
 
@@ -83,11 +83,11 @@
 
                 <div class="skill-row image-left">
                     <div class="skill-image">
-                        <img class="www-image image " src="images/www.png" alt="android-img" align="left">
+                        <img class="www-image image" src="images/www.png" alt="android-img" align="right">
                     </div>
 
                     <div class="skill-content-text">
-                        <h3 class="skill-row-title unselectable">Android Development - 01.07.2019</h3>
+                        <h3 class="skill-row-title unselectable">Web Development - 01.08.2019</h3>
                         <p class="skill-text ">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
                             gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
@@ -111,7 +111,7 @@
 
                 <div class="skill-row image-left">
                     <div class="skill-image">
-                        <img class="android-image image" src="images/android.png" alt="android-img" align="left">
+                        <img class="android-image image" src="images/android.png" alt="android-img" align="right">
                     </div>
 
                     <div class="skill-content-text">
@@ -132,9 +132,8 @@
         <div class="footer">
 
             <ul id="list" class="social-list">
-                <li class="social-item"><a href="#">Twitter</a></li>
-                <li class="social-item"><a href="#">Discord</a></li>
-                <li class="social-item"><a href="#">Email</a></li>
+                <li class="social-item" id="discord"><a href="#">Discord</a></li>
+                <li class="social-item" id="emailTo"><a href="mailto:jakub.gencer@allaboutapps.at">Email</a></li>
             </ul>
             <strong>
                     <p class="copy">&copy; Jakub</p>
@@ -143,6 +142,8 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script/index.js"></script>
+    <script src="script/menu.js"></script>
+    <script src="script/footer.js"></script>
 </body>
 
 </html>
